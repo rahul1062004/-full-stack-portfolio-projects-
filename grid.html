@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Grid Layout Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial;
+    }
+
+    body {
+      background: gray;
+    }
+
+    header {
+      background: #222;
+      color: red;
+      padding: 15px;
+      text-align: center;
+      font-size: 22px;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      padding: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .card {
+      background: blue;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px black;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px #bbb;
+    }
+
+   
+    @media (max-width: 900px) {
+      .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Welcome Grid Layout</header>
+
+  <div class="grid-container">
+    <div class="card">NAME</div>
+    <div class="card">ID</div>
+    <div class="card">ROLL.NO</div>
+    <div class="card">COURSE</div>
+    <div class="card">CITY</div>
+    <div class="card">PIN </div>
+  </div>
+</body>
+</html>
